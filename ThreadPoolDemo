@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 class Task implements Runnable
 {
@@ -55,7 +56,7 @@ public class ThreadPoolDemo {
 		Runnable r5 = new Task("task5");
 		
 		//Creating newFixedThreadPool by ExecutorService
-		ExecutorService pool = Executor.newFixedThreadPool(3);
+		ExecutorService pool = Executors.newFixedThreadPool(3);
 		pool.execute(r1);
 		pool.execute(r2);
 		pool.execute(r3);
